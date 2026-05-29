@@ -29,25 +29,97 @@ export const villages: Village[] = [
   { name: "Diamond Harbour", latitude: 22.1910, longitude: 88.1868, riskScore: 82, riskLevel: "HIGH" },
   { name: "Basirhat", latitude: 22.6527, longitude: 88.8664, riskScore: 71, riskLevel: "MEDIUM" },
   { name: "Jhargram", latitude: 22.4493, longitude: 86.9942, riskScore: 19, riskLevel: "LOW" },
+  { name: "Karimpur", latitude: 22.3089, longitude: 88.2664, riskScore: 68, riskLevel: "MEDIUM" },
+  { name: "Tamluk", latitude: 22.2928, longitude: 87.9169, riskScore: 51, riskLevel: "MEDIUM" },
+  { name: "Medinipur", latitude: 22.1883, longitude: 87.3151, riskScore: 74, riskLevel: "MEDIUM" },
+  { name: "Contai", latitude: 21.8381, longitude: 87.6894, riskScore: 48, riskLevel: "MEDIUM" },
+  { name: "Hooghly", latitude: 23.0267, longitude: 88.4148, riskScore: 66, riskLevel: "MEDIUM" },
+  { name: "Serampore", latitude: 22.7691, longitude: 88.3723, riskScore: 59, riskLevel: "MEDIUM" },
+  { name: "Dakshin Dinajpur", latitude: 25.7037, longitude: 88.1155, riskScore: 72, riskLevel: "MEDIUM" },
+  { name: "Chopra", latitude: 25.8614, longitude: 88.2086, riskScore: 89, riskLevel: "HIGH" },
 ];
 
 // ---- Reports ----
 export const reports: Report[] = [
+  // Sundarbans (HIGH)
   { id: 1, village: "Sundarbans", fever: 1, diarrhea: 1, vomiting: 1, waterCondition: "contaminated", waterNumeric: 1, date: "2026-05-20", riskScore: 87, mlPrediction: 1, riskLevel: "HIGH" },
-  { id: 2, village: "Rampurhat", fever: 1, diarrhea: 1, vomiting: 0, waterCondition: "clean", waterNumeric: 0, date: "2026-05-21", riskScore: 62, mlPrediction: 0, riskLevel: "MEDIUM" },
-  { id: 3, village: "Kalna", fever: 0, diarrhea: 1, vomiting: 0, waterCondition: "clean", waterNumeric: 0, date: "2026-05-22", riskScore: 34, mlPrediction: 0, riskLevel: "LOW" },
-  { id: 4, village: "Bankura", fever: 1, diarrhea: 1, vomiting: 1, waterCondition: "contaminated", waterNumeric: 1, date: "2026-05-22", riskScore: 91, mlPrediction: 1, riskLevel: "HIGH" },
-  { id: 5, village: "Durgapur", fever: 1, diarrhea: 0, vomiting: 1, waterCondition: "clean", waterNumeric: 0, date: "2026-05-23", riskScore: 45, mlPrediction: 0, riskLevel: "MEDIUM" },
-  { id: 6, village: "Malda", fever: 1, diarrhea: 1, vomiting: 0, waterCondition: "contaminated", waterNumeric: 1, date: "2026-05-23", riskScore: 78, mlPrediction: 1, riskLevel: "MEDIUM" },
-  { id: 7, village: "Purulia", fever: 1, diarrhea: 1, vomiting: 1, waterCondition: "contaminated", waterNumeric: 1, date: "2026-05-24", riskScore: 95, mlPrediction: 1, riskLevel: "HIGH" },
-  { id: 8, village: "Bolpur", fever: 0, diarrhea: 0, vomiting: 1, waterCondition: "clean", waterNumeric: 0, date: "2026-05-24", riskScore: 28, mlPrediction: 0, riskLevel: "LOW" },
-  { id: 9, village: "Berhampore", fever: 1, diarrhea: 1, vomiting: 0, waterCondition: "clean", waterNumeric: 0, date: "2026-05-25", riskScore: 55, mlPrediction: 0, riskLevel: "MEDIUM" },
-  { id: 10, village: "Diamond Harbour", fever: 1, diarrhea: 1, vomiting: 1, waterCondition: "contaminated", waterNumeric: 1, date: "2026-05-25", riskScore: 82, mlPrediction: 1, riskLevel: "HIGH" },
-  { id: 11, village: "Basirhat", fever: 1, diarrhea: 1, vomiting: 0, waterCondition: "contaminated", waterNumeric: 1, date: "2026-05-26", riskScore: 71, mlPrediction: 1, riskLevel: "MEDIUM" },
-  { id: 12, village: "Jhargram", fever: 0, diarrhea: 0, vomiting: 0, waterCondition: "clean", waterNumeric: 0, date: "2026-05-27", riskScore: 19, mlPrediction: 0, riskLevel: "LOW" },
-  { id: 13, village: "Sundarbans", fever: 1, diarrhea: 1, vomiting: 0, waterCondition: "contaminated", waterNumeric: 1, date: "2026-05-26", riskScore: 83, mlPrediction: 1, riskLevel: "HIGH" },
-  { id: 14, village: "Purulia", fever: 1, diarrhea: 1, vomiting: 1, waterCondition: "contaminated", waterNumeric: 1, date: "2026-05-27", riskScore: 92, mlPrediction: 1, riskLevel: "HIGH" },
-  { id: 15, village: "Kalna", fever: 0, diarrhea: 0, vomiting: 0, waterCondition: "clean", waterNumeric: 0, date: "2026-05-28", riskScore: 12, mlPrediction: 0, riskLevel: "LOW" },
+  { id: 2, village: "Sundarbans", fever: 1, diarrhea: 1, vomiting: 0, waterCondition: "contaminated", waterNumeric: 1, date: "2026-05-21", riskScore: 88, mlPrediction: 1, riskLevel: "HIGH" },
+  { id: 3, village: "Sundarbans", fever: 1, diarrhea: 1, vomiting: 1, waterCondition: "contaminated", waterNumeric: 1, date: "2026-05-22", riskScore: 89, mlPrediction: 1, riskLevel: "HIGH" },
+  { id: 4, village: "Sundarbans", fever: 1, diarrhea: 1, vomiting: 1, waterCondition: "contaminated", waterNumeric: 1, date: "2026-05-23", riskScore: 86, mlPrediction: 1, riskLevel: "HIGH" },
+  
+  // Bankura (HIGH)
+  { id: 5, village: "Bankura", fever: 1, diarrhea: 1, vomiting: 1, waterCondition: "contaminated", waterNumeric: 1, date: "2026-05-22", riskScore: 91, mlPrediction: 1, riskLevel: "HIGH" },
+  { id: 6, village: "Bankura", fever: 1, diarrhea: 1, vomiting: 1, waterCondition: "contaminated", waterNumeric: 1, date: "2026-05-23", riskScore: 92, mlPrediction: 1, riskLevel: "HIGH" },
+  { id: 7, village: "Bankura", fever: 1, diarrhea: 1, vomiting: 0, waterCondition: "contaminated", waterNumeric: 1, date: "2026-05-24", riskScore: 90, mlPrediction: 1, riskLevel: "HIGH" },
+  { id: 8, village: "Bankura", fever: 1, diarrhea: 1, vomiting: 1, waterCondition: "contaminated", waterNumeric: 1, date: "2026-05-25", riskScore: 91, mlPrediction: 1, riskLevel: "HIGH" },
+  
+  // Purulia (HIGH)
+  { id: 9, village: "Purulia", fever: 1, diarrhea: 1, vomiting: 1, waterCondition: "contaminated", waterNumeric: 1, date: "2026-05-24", riskScore: 95, mlPrediction: 1, riskLevel: "HIGH" },
+  { id: 10, village: "Purulia", fever: 1, diarrhea: 1, vomiting: 1, waterCondition: "contaminated", waterNumeric: 1, date: "2026-05-25", riskScore: 94, mlPrediction: 1, riskLevel: "HIGH" },
+  { id: 11, village: "Purulia", fever: 1, diarrhea: 1, vomiting: 1, waterCondition: "contaminated", waterNumeric: 1, date: "2026-05-26", riskScore: 96, mlPrediction: 1, riskLevel: "HIGH" },
+  { id: 12, village: "Purulia", fever: 1, diarrhea: 1, vomiting: 1, waterCondition: "contaminated", waterNumeric: 1, date: "2026-05-27", riskScore: 95, mlPrediction: 1, riskLevel: "HIGH" },
+  
+  // Diamond Harbour (HIGH)
+  { id: 13, village: "Diamond Harbour", fever: 1, diarrhea: 1, vomiting: 1, waterCondition: "contaminated", waterNumeric: 1, date: "2026-05-25", riskScore: 82, mlPrediction: 1, riskLevel: "HIGH" },
+  { id: 14, village: "Diamond Harbour", fever: 1, diarrhea: 1, vomiting: 0, waterCondition: "contaminated", waterNumeric: 1, date: "2026-05-26", riskScore: 81, mlPrediction: 1, riskLevel: "HIGH" },
+  
+  // Chopra (HIGH)
+  { id: 15, village: "Chopra", fever: 1, diarrhea: 1, vomiting: 1, waterCondition: "contaminated", waterNumeric: 1, date: "2026-05-27", riskScore: 89, mlPrediction: 1, riskLevel: "HIGH" },
+  
+  // Malda (MEDIUM)
+  { id: 16, village: "Malda", fever: 1, diarrhea: 1, vomiting: 0, waterCondition: "contaminated", waterNumeric: 1, date: "2026-05-23", riskScore: 78, mlPrediction: 1, riskLevel: "MEDIUM" },
+  { id: 17, village: "Malda", fever: 1, diarrhea: 0, vomiting: 0, waterCondition: "contaminated", waterNumeric: 1, date: "2026-05-24", riskScore: 77, mlPrediction: 1, riskLevel: "MEDIUM" },
+  { id: 18, village: "Malda", fever: 0, diarrhea: 1, vomiting: 0, waterCondition: "clean", waterNumeric: 0, date: "2026-05-25", riskScore: 76, mlPrediction: 0, riskLevel: "MEDIUM" },
+  
+  // Basirhat (MEDIUM)
+  { id: 19, village: "Basirhat", fever: 1, diarrhea: 1, vomiting: 0, waterCondition: "contaminated", waterNumeric: 1, date: "2026-05-26", riskScore: 71, mlPrediction: 1, riskLevel: "MEDIUM" },
+  { id: 20, village: "Basirhat", fever: 1, diarrhea: 1, vomiting: 1, waterCondition: "contaminated", waterNumeric: 1, date: "2026-05-27", riskScore: 72, mlPrediction: 1, riskLevel: "MEDIUM" },
+  
+  // Medinipur (MEDIUM)
+  { id: 21, village: "Medinipur", fever: 1, diarrhea: 1, vomiting: 0, waterCondition: "contaminated", waterNumeric: 1, date: "2026-05-26", riskScore: 74, mlPrediction: 1, riskLevel: "MEDIUM" },
+  { id: 22, village: "Medinipur", fever: 0, diarrhea: 1, vomiting: 0, waterCondition: "clean", waterNumeric: 0, date: "2026-05-27", riskScore: 73, mlPrediction: 0, riskLevel: "MEDIUM" },
+  
+  // Dakshin Dinajpur (MEDIUM)
+  { id: 23, village: "Dakshin Dinajpur", fever: 1, diarrhea: 1, vomiting: 0, waterCondition: "contaminated", waterNumeric: 1, date: "2026-05-25", riskScore: 72, mlPrediction: 1, riskLevel: "MEDIUM" },
+  
+  // Rampurhat (MEDIUM)
+  { id: 24, village: "Rampurhat", fever: 1, diarrhea: 1, vomiting: 0, waterCondition: "clean", waterNumeric: 0, date: "2026-05-21", riskScore: 62, mlPrediction: 0, riskLevel: "MEDIUM" },
+  { id: 25, village: "Rampurhat", fever: 1, diarrhea: 0, vomiting: 0, waterCondition: "contaminated", waterNumeric: 1, date: "2026-05-22", riskScore: 63, mlPrediction: 1, riskLevel: "MEDIUM" },
+  
+  // Hooghly (MEDIUM)
+  { id: 26, village: "Hooghly", fever: 1, diarrhea: 1, vomiting: 0, waterCondition: "contaminated", waterNumeric: 1, date: "2026-05-23", riskScore: 66, mlPrediction: 1, riskLevel: "MEDIUM" },
+  
+  // Karimpur (MEDIUM)
+  { id: 27, village: "Karimpur", fever: 1, diarrhea: 1, vomiting: 0, waterCondition: "contaminated", waterNumeric: 1, date: "2026-05-24", riskScore: 68, mlPrediction: 1, riskLevel: "MEDIUM" },
+  
+  // Tamluk (MEDIUM)
+  { id: 28, village: "Tamluk", fever: 0, diarrhea: 1, vomiting: 0, waterCondition: "clean", waterNumeric: 0, date: "2026-05-25", riskScore: 51, mlPrediction: 0, riskLevel: "MEDIUM" },
+  
+  // Serampore (MEDIUM)
+  { id: 29, village: "Serampore", fever: 1, diarrhea: 1, vomiting: 0, waterCondition: "clean", waterNumeric: 0, date: "2026-05-26", riskScore: 59, mlPrediction: 0, riskLevel: "MEDIUM" },
+  
+  // Durgapur (MEDIUM)
+  { id: 30, village: "Durgapur", fever: 1, diarrhea: 0, vomiting: 1, waterCondition: "clean", waterNumeric: 0, date: "2026-05-23", riskScore: 45, mlPrediction: 0, riskLevel: "MEDIUM" },
+  { id: 31, village: "Durgapur", fever: 0, diarrhea: 1, vomiting: 0, waterCondition: "clean", waterNumeric: 0, date: "2026-05-24", riskScore: 44, mlPrediction: 0, riskLevel: "MEDIUM" },
+  
+  // Contai (MEDIUM)
+  { id: 32, village: "Contai", fever: 0, diarrhea: 1, vomiting: 0, waterCondition: "clean", waterNumeric: 0, date: "2026-05-24", riskScore: 48, mlPrediction: 0, riskLevel: "MEDIUM" },
+  
+  // Berhampore (MEDIUM)
+  { id: 33, village: "Berhampore", fever: 1, diarrhea: 1, vomiting: 0, waterCondition: "clean", waterNumeric: 0, date: "2026-05-25", riskScore: 55, mlPrediction: 0, riskLevel: "MEDIUM" },
+  { id: 34, village: "Berhampore", fever: 1, diarrhea: 0, vomiting: 0, waterCondition: "clean", waterNumeric: 0, date: "2026-05-26", riskScore: 54, mlPrediction: 0, riskLevel: "MEDIUM" },
+  
+  // Kalna (LOW)
+  { id: 35, village: "Kalna", fever: 0, diarrhea: 1, vomiting: 0, waterCondition: "clean", waterNumeric: 0, date: "2026-05-22", riskScore: 34, mlPrediction: 0, riskLevel: "LOW" },
+  { id: 36, village: "Kalna", fever: 0, diarrhea: 0, vomiting: 0, waterCondition: "clean", waterNumeric: 0, date: "2026-05-27", riskScore: 32, mlPrediction: 0, riskLevel: "LOW" },
+  
+  // Bolpur (LOW)
+  { id: 37, village: "Bolpur", fever: 0, diarrhea: 0, vomiting: 1, waterCondition: "clean", waterNumeric: 0, date: "2026-05-24", riskScore: 28, mlPrediction: 0, riskLevel: "LOW" },
+  { id: 38, village: "Bolpur", fever: 0, diarrhea: 0, vomiting: 0, waterCondition: "clean", waterNumeric: 0, date: "2026-05-28", riskScore: 26, mlPrediction: 0, riskLevel: "LOW" },
+  
+  // Jhargram (LOW)
+  { id: 39, village: "Jhargram", fever: 0, diarrhea: 0, vomiting: 0, waterCondition: "clean", waterNumeric: 0, date: "2026-05-27", riskScore: 19, mlPrediction: 0, riskLevel: "LOW" },
+  { id: 40, village: "Jhargram", fever: 0, diarrhea: 0, vomiting: 0, waterCondition: "clean", waterNumeric: 0, date: "2026-05-28", riskScore: 18, mlPrediction: 0, riskLevel: "LOW" },
 ];
 
 // ---- Time Series (Cases Over Time) ----

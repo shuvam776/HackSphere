@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { useRole } from "@/lib/RoleContext";
 import { getRiskBadgeClass, getRiskColor } from "@/utils/helpers";
 import dynamic from "next/dynamic";
@@ -283,26 +284,32 @@ export default function AdminPage() {
             </h2>
             <div className="space-y-3 max-h-[400px] overflow-y-auto pr-1">
               {highRiskVillages.map((v, i) => (
-                <div key={i} className="flex items-center justify-between p-3 rounded-xl bg-danger-50/20 border border-danger-100 hover:bg-danger-50/50 transition-all duration-200">
-                  <div className="flex items-center gap-3">
-                    <div className="relative">
-                      <span className="w-2 h-2 rounded-full bg-danger-500 block" />
-                      <span className="w-2 h-2 rounded-full bg-danger-500 block absolute inset-0 animate-ping opacity-30" />
-                    </div>
-                    <div>
-                      <div className="font-bold text-slate-800 text-xs">{v.name} District</div>
-                      <div className="text-[10px] text-slate-400">
-                        Lat: {v.latitude.toFixed(2)}°N, Lng: {v.longitude.toFixed(2)}°E
+                <Link
+                  key={i}
+                  href={`/admin/${encodeURIComponent(v.name)}`}
+                  className="group block"
+                >
+                  <div className="flex items-center justify-between p-3 rounded-xl bg-danger-50/20 border border-danger-100 hover:bg-danger-50/50 transition-all duration-200 group-hover:border-danger-300">
+                    <div className="flex items-center gap-3">
+                      <div className="relative">
+                        <span className="w-2 h-2 rounded-full bg-danger-500 block" />
+                        <span className="w-2 h-2 rounded-full bg-danger-500 block absolute inset-0 animate-ping opacity-30" />
+                      </div>
+                      <div>
+                        <div className="font-bold text-slate-800 text-xs">{v.name} District</div>
+                        <div className="text-[10px] text-slate-400">
+                          Lat: {v.latitude.toFixed(2)}°N, Lng: {v.longitude.toFixed(2)}°E
+                        </div>
                       </div>
                     </div>
+                    <div className="text-right">
+                      <div className="text-sm font-black text-danger-500">{v.riskScore}%</div>
+                      <span className={`text-[8px] font-black px-1.5 py-0.5 rounded-full ${getRiskBadgeClass(v.riskLevel)}`}>
+                        {v.riskLevel}
+                      </span>
+                    </div>
                   </div>
-                  <div className="text-right">
-                    <div className="text-sm font-black text-danger-500">{v.riskScore}%</div>
-                    <span className={`text-[8px] font-black px-1.5 py-0.5 rounded-full ${getRiskBadgeClass(v.riskLevel)}`}>
-                      {v.riskLevel}
-                    </span>
-                  </div>
-                </div>
+                </Link>
               ))}
               {highRiskVillages.length === 0 && (
                 <div className="text-center py-10 text-xs text-slate-400">
@@ -324,7 +331,7 @@ export default function AdminPage() {
               <span className="text-[10px] uppercase font-bold text-slate-400">Live Hotspot Overlays</span>
             </div>
             <div className="h-[380px] rounded-xl overflow-hidden border border-slate-200">
-              <MapView villages={villagesList} />
+              <MapView villages={villagesList} detailPathPrefix="/admin" />
             </div>
           </div>
 

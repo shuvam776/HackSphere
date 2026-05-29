@@ -8,6 +8,7 @@ import type { Village } from "@/types/report";
 interface MapViewProps {
   villages?: Village[];
   selectedVillage?: string;
+  detailPathPrefix?: string;
 }
 
 // Google Maps Slate/Light-Grey Minimalist Theme Styles Array
@@ -62,7 +63,7 @@ const gmapsLightTheme = [
   }
 ];
 
-export default function MapView({ villages = defaultVillages, selectedVillage }: MapViewProps) {
+export default function MapView({ villages = defaultVillages, selectedVillage, detailPathPrefix }: MapViewProps) {
   const mapRef = useRef<HTMLDivElement>(null);
   const [scriptLoaded, setScriptLoaded] = useState(false);
   const mapInstanceRef = useRef<any>(null);
@@ -193,6 +194,16 @@ export default function MapView({ villages = defaultVillages, selectedVillage }:
       markersRef.current.push(marker);
 
       // InfoWindow Content
+      const detailLink = detailPathPrefix
+        ? `
+          <div style="margin-top: 10px; display: flex; justify-content: flex-end;">
+            <a href="${detailPathPrefix}/${encodeURIComponent(village.name)}" style="font-size: 11px; font-weight: 700; color: #2563eb; text-decoration: none; background: #eff6ff; padding: 6px 10px; border-radius: 999px; border: 1px solid rgba(37, 99, 235, 0.15);">
+              View district dossier
+            </a>
+          </div>
+        `
+        : "";
+
       const popupContent = `
         <div style="font-family: Inter, sans-serif; min-width: 180px; padding: 10px 12px; background: #ffffff; color: #1e293b; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 4px 18px rgba(15, 23, 42, 0.08);">
           <h3 style="margin: 0 0 6px 0; font-size: 14px; font-weight: 800; color: #0f172a; display: flex; align-items: center; gap: 4px;">
@@ -210,6 +221,7 @@ export default function MapView({ villages = defaultVillages, selectedVillage }:
           <div style="font-size: 10px; color: #94a3b8; margin-top: 6px; font-family: monospace;">
             Lat: ${village.latitude.toFixed(4)}<br/>Lng: ${village.longitude.toFixed(4)}
           </div>
+          ${detailLink}
         </div>
       `;
 
